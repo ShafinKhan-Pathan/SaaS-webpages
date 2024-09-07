@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li{
+    list-style-type: none;
+}
+.container{
+    padding: 80px 0;
+}
+.row{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* STYLING NAV BAR */
+.nav__bar{
+    width: 100%;
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__image--logo{
+    width: 55px;
+}
+.nav__links{
+    display: flex;
+}
+.nav__link{
+    padding: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.extrapadding{
+    padding-left: 45px;
+    padding-right: 10px;
+}
+.nav__link--primary{
+    border: 2px solid black;
+    border-style: none;
+    background-color: #1a7431;
+    color: white;
+    border-radius: 24px;
+    padding: 8px 24px;
+    margin: 16px;
+   
+}
+.nav__link--primary:hover{
+    background-color: #155d27;
+    transition: all 300ms ease;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+
+}
+.nav__link:hover{
+    color: #1a7431;
+    font-size: 24px;
+    transition: all 300ms ease;
+    text-decoration: underline;
+}
+
+/* STYLING LANDING PAGE */
+.wrapper__fourty__sixty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fourty{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+}
+.sixty{
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landpage__image{
+    width: 100%;
+}
+.span__modifier{
+    color: #155d27;
+    font-size: 28px;
+}
+.span__modifier--para{
+    color: #155d27;
+    font-size: 18px;
+    font-weight: 500;
+}
+.landingpage__h1{
+    margin: 16px 0;
+}
+.landingpage__para{
+    margin: 16px 0;
+}
+.input__style--container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1a7431;
+    border-radius: 50px;
+    padding: 5px;
+    max-width: 400px;
+    margin: 20px 0;
+}
+.input__style--container input{
+    border: none;
+    border-radius: 50px 0 0 50px;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+}
+.input__style--container button{
+    background-color: #1a7431; 
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.input__style--container button:hover {
+    background-color: #155d27; 
+}
+.landingpage__para--achievements{
+    color: gray;
+    margin-top: 24px;
+}
+.achievements__img--wrapper{
+    display: flex;
+}
+.achievements__img{
+    padding: 10px;
+    width: 85px;
+
+}
+
+/* STYLING FEATURES */
+.feature__wrapper{
+    width: 100%;
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.service{
+    display: flex;
+    max-width: calc(100% / 3);
+    padding: 24px 16px;
+}
+.service__image--wrapper{
+    font-size: 25px;
+    max-width: calc(100% / 3);
+    padding: 10px;
+    color: #155d27;
+}
+.service__icon{
+    border: 2px solid #1a743059;
+    padding: 10px;
+    border-radius: 10px;
+}
+.feature__h3, .feature__h2, .feature__para{
+    width: 100%;
+    text-align: center;
+    padding: 4px 0;
+    margin: 4px 0;
+}
+.feature__h3{
+    color: #155d27;
+}
+.feature__h2{
+    font-size: 40px;
+}
+.span__feature--modifier{
+    color: #155d27;
+}
+.span__feature--para{
+    font-size: 32px;
+    color: #155d27;
+    font-weight: 500;
+}
+
+/* STYLING TRUST SECTION  */
+
+.wrapper--right--left{
+    display: flex;
+}
+
+.fiftyleftside{
+    width: 50%;
+}
+.fiftyrightside{
+    width: 50%;
+}
+.trust__subtitle{
+    font-size: 48px;
+}
+.trust__para, .trust__button, .trust__subtitle{
+    margin-top: 10px;
+}
+.trust__figure--image{
+    width: 100%;
+}
+.trust__image{
+    width: 100%;
+}
+.trust__button{
+    background-color: #1a7431;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin-top: 16px;
+    padding: 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.icon__wrapper{
+    display: flex;
+}
+.icon__wrapper i{
+    padding: 16px;
+    opacity: 50%;
+    font-size: 20px;
+}
+.fiftyrightside__para--modifier{
+    margin-left: 50px;
+}
+.fiftyrightside__wrapper--margin{
+    margin-left: 48px;
+}
+.h6--modifier{
+    padding: 8px;
+    font-size: 20px;
+}
