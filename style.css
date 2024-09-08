@@ -448,6 +448,69 @@ li {
   font-size: 12px;
 }
 
+/* TESTIMONIALS */
+.testimonial__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.testi__image{
+  width: 85px;
+  border: 2px solid #155d27;
+  border-radius: 50%;
+}
+.testimonial__wrapper--special{
+  display: flex;
+  flex-direction: column;
+}
+.testimonials__h6--modifier {
+  font-size: 20px;
+}
+.testimonials__icon__wrapper {
+  display: flex;
+}
+
+.testimonials__icon__wrapper i {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 20px;
+}
+/* FAQS Section */
+.faq{
+  border: 2px solid #24242440;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 32px;
+  align-items: center;
+}
+details{
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #24242473;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+details summary{
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  list-style: none;
+}
+details[open] summary::after{
+  content: "▲";
+  float: right;
+}
+details summary::after{
+  content: "▼";
+  float: right;
+}
+details p{
+  margin-top: 16px;
+  font-size: 14px;
+  color: gray;
+}
+
 .contactus {
   display: flex;
   height: 15vh;
@@ -617,6 +680,9 @@ li {
   }
 
   .h6--modifier {
+    font-size: 16px;
+  }
+  .testimonials__h6--modifier {
     font-size: 16px;
   }
 
@@ -828,8 +894,10 @@ li {
   .footer__image--logo {
     width: 65px;
   }
-
   .footer__para {
+    font-size: 10px;
+  }
+  details summary{
     font-size: 10px;
   }
 }
@@ -857,6 +925,17 @@ li {
     align-items: center;
     justify-content: center;
   }
+  .testi__image{
+    width: 65px;
+    border: 2px solid #155d27;
+    border-radius: 50%;
+  }
+  .testimonial__wrapper--special h5, h6{
+    font-size: 8px;
+  }
+  .testimonials__small--anchor{
+    font-size: 8px;
+  }
 }
 @media (max-width:360px) {
   .service__icon {
@@ -867,5 +946,8 @@ li {
   .price__plan {
     font-size: 24px;
     padding: 8px 16px;
+  }
+  details summary{
+    font-size: 8px;
   }
 }
