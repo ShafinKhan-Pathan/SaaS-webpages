@@ -25,6 +25,7 @@ li {
 .row {
   width: 100%;
   max-width: 1200px;
+  padding-left: 24px;
   margin: 0 auto;
 }
 
@@ -32,6 +33,7 @@ li {
 .nav__bar {
   width: 100%;
   height: 95px;
+  padding: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,7 +82,60 @@ li {
   transition: all 300ms ease;
   text-decoration: underline;
 }
-
+/* MENU DROP BARS */
+.btn__menu{
+  background-color: transparent;
+  color: #155d27;
+  font-size: 32px;
+  text-align: center;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+.menudrop{
+  position: absolute;
+  background-color: #242424;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease
+}
+.btn__menu--close{
+  position: absolute;
+  right: 20px;
+  top:12px;
+  padding: 8px;
+  color: white;
+}
+.menu__links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.menu__list{
+  padding: 24px;
+  font-size: 32px;
+}
+.menu__link{
+  color: white;
+}
+.menu--open .menudrop{
+  visibility: visible;
+  opacity: 1;
+}
+.menu--open{
+  max-height: 100vh;
+  overflow-y: hidden;
+}
 /* STYLING LANDING PAGE */
 .wrapper__fourty__sixty {
   display: flex;
@@ -383,7 +438,7 @@ li {
 
 .contactus {
   display: flex;
-  height: 20vh;
+  height: 10vh;
   background-color: #1a7431;
   justify-content: space-around;
   align-items: center;
@@ -448,4 +503,252 @@ li {
 
 .footer__image--logo {
   filter: invert(1);
+}
+
+/* Working on animation */
+
+@keyframes slideInRight {
+  0%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+    0%{
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+.section {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+}
+.slide__right{
+  animation-name: slideInRight;
+}
+.slide__left{
+  animation-name:slideInLeft;
+}
+
+/* Responsive design */
+@media (max-width:1046px){
+  .tax__message{
+    display: none;
+  }
+}
+@media (max-width:845px){
+  .nav__link{
+    font-size: 10px;
+  }
+  .nav__link--primary{
+    font-size: 10px;
+  }
+  .prices{
+    flex-direction: column;
+    width: 100%;
+  }
+  .price{
+    max-width: 80%;
+    margin: 10px 20px;
+  }
+}
+
+@media (max-width:755px){
+  .nav__link--primary{
+    display: none;
+  }
+}
+@media (max-width:1000px){
+  .nav__image--logo{
+    width: 45px;
+  }
+  .nav__links{
+    font-size: 12px;
+  }
+  .landingpage__h1, .span__modifier{
+    font-size: 16px;
+  }
+  .landingpage__para, .span__modifier--para{
+    font-size: 14px;
+  }
+  .input__style--container{
+    margin: 8px 0;
+  }
+  .input__style--container input{
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  .input__style--container button{
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  .span__feature--para{
+    font-size: 20px;
+  }
+  .service__para{
+    font-size: 12px;
+  }
+  .trust__subtitle{
+    font-size: 28px;
+  }
+  .trust__para{
+    font-size: 13px;
+  }
+  .trust__button{
+    font-size: 10px;
+  }
+  .h6--modifier{
+    font-size: 16px;
+  }
+  .fiftyrightside__para--modifier{
+    font-size: 12px;
+  }
+  .feature__h2{
+    font-size: 28px;
+  }
+  .price__para--modifier{
+    font-size: 14px;
+  }
+  .contactus__h1{
+    font-size: 24px;
+  }
+  .contactus__button{
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width:768px){
+  .nav__image--logo{
+    width: 35px;
+  }
+  .nav__link{
+    font-size: 12px;
+  }
+  .nav__link:hover{
+    font-size: 16px;
+  }
+  .nav__link--primary:hover{
+    font-size: 16px;
+  }
+  .landingpage__h1, .span__modifier{
+    font-size: 20px;
+    text-align: center;
+  }
+    .wrapper__fourty__sixty{
+      flex-direction: column;
+    }
+    .fourty{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      max-width: 80%;
+    }
+    .landingpage__para{
+      text-align: center;
+    }
+    .input__style--container input{
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+    .input__style--container button{
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+    .achievements__img{
+      width: 125px;
+      height: 45px;
+    }
+    .landpage__image{
+      margin-top: 48px;
+    }
+    .sixty{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      max-width: 80%;
+    }
+    .feature__h2{
+      font-size: 20px;
+    }
+    .feature__para{
+      font-size: 12px;
+    }
+    .service{
+      max-width: calc(100% / 2);
+    }
+    .service__icon{
+      font-size: 14px;
+    }
+    .wrapper--right--left{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .fiftyleftside{
+      width: 100%;
+      max-width: 80%;
+      text-align: center;
+    }
+    .fiftyrightside{
+      width: 100%;
+      max-width: 80%;
+      margin-top: 32px;
+    }
+    .trust__subtitle, .span__feature--modifier{
+      font-size: 20px;
+    }
+    .fiftyrightside__wrapper--margin{
+      margin-left: 48px;
+    }
+    .fiftyrightside__wrapper--margin .span__feature--modifier, .trust__subtitle{
+      text-align: center;
+    }
+    
+}
+
+@media (max-width:650px){
+  .nav__link{
+    display: none;
+  }
+  .nav__link--primary{
+    display: none;
+  }
+  .btn__menu{
+    display: block;
+  }
+}
+@media (max-width:550px) {
+  .price__para--modifier{
+    font-size: 12px;
+  }
+  .contactus__h1{
+    font-size: 16px;
+  }
+  .contactus__button{
+    font-size: 8px;
+    padding: 4px 8px;
+  }
+  #footer h3{
+    font-size: 12px;
+  }
+  .footer__link li{
+    font-size: 10px;
+  }
+  .footer__image--logo{
+    width: 35px;
+  }
+  .footer__para{
+    font-size: 10px;
+  }
 }
