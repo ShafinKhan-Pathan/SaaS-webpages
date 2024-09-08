@@ -755,17 +755,21 @@ li {
     max-width: 80%;
     text-align: center;
   }
-
-  .trust__figure--image {
+  .trust__figure--image{
+    width: 100%;
+    text-align: center;
+  }
+  .trust__image {
     max-width: 80%;
   }
 
   .fiftyrightside {
     width: 100%;
-    max-width: 80%;
+    max-width: 80%; 
     margin-top: 32px;
+    
   }
-
+   
   .trust__subtitle,
   .span__feature--modifier {
     font-size: 20px;
